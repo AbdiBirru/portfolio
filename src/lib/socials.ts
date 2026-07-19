@@ -1,4 +1,4 @@
-import { SiGithub, SiLinkedin, SiX, SiBluesky } from "react-icons/si";
+import { GithubIcon, LinkedinIcon, XIcon, BlueskyIcon } from "@/components/icons/BrandIcons";
 import { Mail } from "lucide-react";
 
 export interface SocialLink {
@@ -8,9 +8,9 @@ export interface SocialLink {
 }
 
 export const socialLinks: SocialLink[] = [
-  { label: "GitHub", href: "https://github.com/abdibirru", icon: SiGithub },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/abdibirru", icon: SiLinkedin },
-  { label: "X", href: "https://x.com/DevAbdiBirru", icon: SiX },
-  { label: "Bluesky", href: "https://bsky.app/profile/abdibirru.bsky.social", icon: SiBluesky },
+  { label: "GitHub", href: "https://github.com/abdibirru", icon: GithubIcon },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/abdibirru", icon: LinkedinIcon },
+  { label: "X", href: "https://x.com/DevAbdiBirru", icon: XIcon },
+  { label: "Bluesky", href: "https://bsky.app/profile/abdibirru.bsky.social", icon: BlueskyIcon },
   { label: "Email", href: "mailto:dev.abdibirru@gmail.com", icon: Mail },
 ];
