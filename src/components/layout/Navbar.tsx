@@ -49,7 +49,7 @@ export default function Navbar() {
         <nav aria-label="Primary" className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             
-              key={link.href}
+             <a key={link.href}
               href={link.href}
               className="text-sm font-medium"
               style={{ color: "var(--text-secondary)" }}
@@ -88,7 +88,7 @@ export default function Navbar() {
         >
           {navLinks.map((link) => (
             
-              key={link.href}
+             <a key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
               className="text-base font-medium py-2"
