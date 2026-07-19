@@ -75,3 +75,22 @@ h1, h2, h3, h4, h5, h6 {
 section {
   scroll-margin-top: 96px;
 }
+
+.hero-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  opacity: 0.35;
+  pointer-events: none;
+  animation: blob-float 14s ease-in-out infinite;
+}
+
+.hero-blob-1 { width: 420px; height: 420px; top: -120px; left: -100px; background: var(--accent-purple); }
+.hero-blob-2 { width: 380px; height: 380px; bottom: -140px; right: -100px; background: var(--accent-cyan); animation-delay: -5s; }
+.hero-blob-3 { width: 300px; height: 300px; top: 40%; left: 50%; background: var(--accent-blue); animation-delay: -9s; }
+
+@keyframes blob-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -20px) scale(1.08); }
+  66% { transform: translate(-20px, 25px) scale(0.95); }
+}
