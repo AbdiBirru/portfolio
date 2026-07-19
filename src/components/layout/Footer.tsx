@@ -15,19 +15,22 @@ export default function Footer() {
         </p>
 
         <div className="flex items-center gap-4">
-          {socialLinks.map(({ label, href, icon: Icon }) => (
-            
-              key={label}
-              href={href}
-              target={href.startsWith("http") ? "_blank" : undefined}
-              rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-              aria-label={label}
-              className="w-10 h-10 flex items-center justify-center rounded-full border hover:opacity-80"
-              style={{ borderColor: "var(--border)" }}
-            >
-              <Icon size={18} />
-            </a>
-          ))}
+          {socialLinks.map(({ label, href, icon: Icon }) => {
+            const isExternal = href.startsWith("http");
+            return (
+              
+                key={label}
+                href={href}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noopener noreferrer" : undefined}
+                aria-label={label}
+                className="w-10 h-10 flex items-center justify-center rounded-full border hover:opacity-80"
+                style={{ borderColor: "var(--border)" }}
+              >
+                <Icon size={18} />
+              </a>
+            );
+          })}
         </div>
 
         <p className="text-xs" style={{ color: "var(--text-secondary)" }}>
