@@ -17,16 +17,9 @@ export default function Footer() {
         <div className="flex items-center gap-4">
           {socialLinks.map(({ label, href, icon: Icon }) => {
             const isExternal = href.startsWith("http");
+            const linkProps = isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {};
             return (
-              
-                key={label}
-                href={href}
-                target={isExternal ? "_blank" : undefined}
-                rel={isExternal ? "noopener noreferrer" : undefined}
-                aria-label={label}
-                className="w-10 h-10 flex items-center justify-center rounded-full border hover:opacity-80"
-                style={{ borderColor: "var(--border)" }}
-              >
+              <a key={label} href={href} aria-label={label} {...linkProps} className="w-10 h-10 flex items-center justify-center rounded-full border hover:opacity-80" style={{ borderColor: "var(--border)" }}>
                 <Icon size={18} />
               </a>
             );
