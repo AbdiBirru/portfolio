@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Full-Stack Developer",
+  title: "AbdiBuilds | Full-Stack Developer",
   description: "Full-stack developer building fast, scalable web applications.",
 };
 
@@ -30,7 +30,7 @@ export default function RootLayout({
       <body className={`${spaceGrotesk.variable} ${inter.variable} antialiased`}>
         <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem={false}>
           <Navbar />
-          <main>{children}</main>
+          <main className="pt-20">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
