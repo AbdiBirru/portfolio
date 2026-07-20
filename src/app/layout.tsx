@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ThemeProvider from "@/components/layout/ThemeProvider";
 import MotionProvider from "@/components/layout/MotionProvider";
+import SectionKeyNav from "@/components/layout/SectionKeyNav";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-heading", display: "swap" });
@@ -23,16 +24,7 @@ export const metadata: Metadata = {
   alternates: { canonical: siteUrl },
 };
 
-const personJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Abdisa Birru",
-  alternateName: "AbdiBuilds",
-  jobTitle: "Full-Stack Developer",
-  url: siteUrl,
-  affiliation: { "@type": "CollegeOrUniversity", name: "Hawassa University" },
-  sameAs: ["https://github.com/abdibirru", "https://www.linkedin.com/in/abdibirru", "https://x.com/DevAbdiBirru", "https://bsky.app/profile/abdibirru.bsky.social"],
-};
+const personJsonLd = { "@context": "https://schema.org", "@type": "Person", name: "Abdisa Birru", alternateName: "AbdiBuilds", jobTitle: "Full-Stack Developer", url: siteUrl, affiliation: { "@type": "CollegeOrUniversity", name: "Hawassa University" }, sameAs: ["https://github.com/abdibirru", "https://www.linkedin.com/in/abdibirru", "https://x.com/DevAbdiBirru", "https://bsky.app/profile/abdibirru.bsky.social"] };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -44,8 +36,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem={false}>
           <MotionProvider>
             <Navbar />
-            <main className="pt-20">{children}</main>
-            <Footer />
+            <main className="snap-container">
+              {children}
+              <Footer />
+            </main>
+            <SectionKeyNav />
           </MotionProvider>
         </ThemeProvider>
       </body>
