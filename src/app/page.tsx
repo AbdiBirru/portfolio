@@ -6,6 +6,7 @@ import Experience from "@/components/sections/Experience";
 import Approach from "@/components/sections/Approach";
 import GitHubStats from "@/components/sections/GitHubStats";
 import Blog from "@/components/sections/Blog";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Approach />
       <GitHubStats />
       <Blog />
+      <Contact />
     </>
   );
 }
