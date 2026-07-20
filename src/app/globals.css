@@ -99,3 +99,9 @@ section {
 .gh-stats-light { display: none; }
 [data-theme="light"] .gh-stats-dark { display: none; }
 [data-theme="light"] .gh-stats-light { display: block; }
+
+:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
