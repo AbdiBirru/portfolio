@@ -94,3 +94,8 @@ section {
   33% { transform: translate(30px, -20px) scale(1.08); }
   66% { transform: translate(-20px, 25px) scale(0.95); }
 }
+
+.gh-stats-dark { display: block; }
+.gh-stats-light { display: none; }
+[data-theme="light"] .gh-stats-dark { display: none; }
+[data-theme="light"] .gh-stats-light { display: block; }
