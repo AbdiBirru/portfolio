@@ -7,7 +7,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   const { title, tagline, problem, solution, features, stack, github, demo, image } = project;
 
   return (
-    <div className="rounded-2xl border overflow-hidden flex flex-col h-full transition-transform hover:-translate-y-1" style={{ backgroundColor: "var(--bg-elevated)", borderColor: "var(--border)" }}>
+    <div className="rounded-2xl border overflow-hidden flex flex-col h-full transition-transform hover:-translate-y-1" style={{ backgroundColor: "var(--bg-elevated)", borderColor: "var(--border)", boxShadow: "var(--card-glow)" }}>
       <div className="relative w-full aspect-video flex items-center justify-center" style={{ backgroundImage: "linear-gradient(135deg, var(--accent-purple), var(--accent-blue), var(--accent-cyan))" }}>
         {image ? (
           <Image src={image} alt={`${title} preview`} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />

@@ -117,3 +117,29 @@ section {
 @media (prefers-reduced-motion: reduce) {
   .snap-container { scroll-behavior: auto; }
 }
+
+:root {
+  --card-glow: 0 0 24px rgba(99, 102, 241, 0.16);
+}
+
+[data-theme="light"] {
+  --card-glow: 0 0 16px rgba(79, 70, 229, 0.08);
+}
+
+.global-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background-color: var(--bg);
+  pointer-events: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

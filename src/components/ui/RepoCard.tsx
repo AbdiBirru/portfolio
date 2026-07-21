@@ -10,7 +10,7 @@ interface RepoCardProps {
 
 export default function RepoCard({ name, description, language, stars, url }: RepoCardProps) {
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer" className="rounded-2xl border p-6 flex flex-col gap-3 transition-transform hover:-translate-y-1" style={{ backgroundColor: "var(--bg-elevated)", borderColor: "var(--border)" }}>
+    <a href={url} target="_blank" rel="noopener noreferrer" className="rounded-2xl border p-6 flex flex-col gap-3 h-full transition-transform hover:-translate-y-1" style={{ backgroundColor: "var(--bg-elevated)", borderColor: "var(--border)", boxShadow: "var(--card-glow)" }}>
       <div className="flex items-center justify-between gap-2">
         <h3 className="text-base font-semibold truncate">{name}</h3>
         <ExternalLink size={16} style={{ color: "var(--text-secondary)" }} />
